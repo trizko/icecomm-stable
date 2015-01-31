@@ -6917,7 +6917,7 @@ function toArray(list, index) {
 
 var Icecomm = function(APIKEY, appSettings) {
   var eventsObj = {};
-  var socket = io.connect('http://icecomm-dev.elasticbeanstalk.com:80');
+  var socket = io.connect('https://cdn.icecomm.io:443');
   var localPeerConnections = {};
   var dataChannels = {};
   var remoteStreams = {};
@@ -7164,7 +7164,6 @@ var Icecomm = function(APIKEY, appSettings) {
   }
 
   function call(callerID, roomSettings, serverInfo) {
-    printDebugMesasge('serverInfo ' + serverInfo);
     createPeerConnections(callerID, serverInfo);
 
     if (roomSettings.stream) {
