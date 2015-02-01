@@ -14,6 +14,7 @@
     "bower_components",
     "test",
     "tests",
-    "server.js"
+    "server.js",
+    "*.js"
   ]
 }
