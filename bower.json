@@ -8,6 +8,7 @@
     "webrtc",
     "socketio"
   ],
+  "main": "src/icecomm.js",
   "license": "MIT",
   "ignore": [
     "node_modules",
