@@ -6918,8 +6918,9 @@ function toArray(list, index) {
 
 var Icecomm = function(APIKEY, appSettings) {
   var eventsObj = {};
-  var socket = io.connect('https://server.icecomm.io:443');
-  // var socket = io.connect('https://localhost:8080');
+  // var socket = io.connect('https://server.icecomm.io:443');
+  var socket = io.connect('https://localhost:8080');
+  // var socket = io.connect('https://icecomm-server-stag.elasticbeanstalk.com:443');
   var localPeerConnections = {};
   var pendingData = {};
   var dataChannels = {};
@@ -7337,7 +7338,7 @@ var Icecomm = function(APIKEY, appSettings) {
       stream = remoteStreams[ID];
     }
     options.stream = URL.createObjectURL(stream);
-    options.rawStream = stream;
+    options.rawStream = localStream;
     options.video = createVideoElement(ID, stream);
 
     return options;
